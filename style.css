@@ -1,0 +1,31 @@
+body {
+    color: #fff;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji',Roboto, Ubuntu, Cantarell, Noto Sans, 'Lucida Grande', sans-serif;
+
+}
+.nav1 {
+    position: fixed;
+    background-color: #121212;
+    margin: 0;
+    padding: 1vw;
+}
+.container {
+    overflow-y: scroll;
+    background-color: #121212;
+    margin: 0;
+    padding: 1vw 2vw;
+}
+.nav2 {
+    background-color: #121212;
+    margin: 0;
+    padding: 1vw;
+}
+.nav ul li {
+    color: #fff;
+}
+.play-controls {
+    position: fixed;
+    background-color: #303030;
+    width: 100%;
+    margin: 0 auto;
+}
