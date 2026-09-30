@@ -6,11 +6,10 @@
     <title>Hear the tracks you've liked: on SoundCloud</title>
     <link rel="icon" href="assets/soundcloud-icon.png">
     <link rel="stylesheet" href="style.css">
-    <script rel="script" href="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
-
 </head>
 <body>
     <div class="nav1">
@@ -55,7 +54,16 @@
         </div>
     </div>
     <div class="play-controls">
-        <p>Ini music bar</p>
+        <button id="previous-button" class="transport-button" type="button" aria-label="Lagu sebelumnya" title="Lagu sebelumnya">
+            <span class="prenext-icon">|◀</span>
+        </button>
+        <button id="play-button" type="button" aria-label="Play current">▶</button>
+        <button id="next-button" class="transport-button" type="button" aria-label="Lagu berikutnya" title="Lagu berikutnya">
+            <span class="prenext-icon">▶|</span>
+        </button>
+        <input id="progress" type="range" min="0" max="100" value="0" aria-label="Posisi lagu">
+        <span id="player-status" role="status" aria-live="polite"></span>
+        <audio id="audio" src="songs/Nightcore - Darkside - Alan Walker.mp3"></audio>
     </div>
 </body>
 </html>
