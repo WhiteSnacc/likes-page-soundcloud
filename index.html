@@ -1,0 +1,45 @@
+<!-- FILTER CONTAINER -->
+<div class="filter-wrapper">
+  <!-- 1. Tombol Kategori / Genre -->
+  <div class="filter-categories">
+    <button class="filter-btn active" data-category="all">Semua</button>
+    <button class="filter-btn" data-category="pop">Pop</button>
+    <button class="filter-btn" data-category="rock">Rock</button>
+    <button class="filter-btn" data-category="electronic">Electronic</button>
+    <button class="filter-btn" data-category="lofi">Lofi</button>
+  </div>
+
+  <!-- 2. Dropdown Urutan / Sorting -->
+  <div class="filter-sort">
+    <label for="sortSelect">Urutkan:</label>
+    <select id="sortSelect">
+      <option value="default">Paling Sesuai</option>
+      <option value="title-asc">Judul (A - Z)</option>
+      <option value="newest">Terbaru</option>
+    </select>
+  </div>
+</div>
+
+<!-- DUMMY GRID LAGU (Ini bagian no. 3 punya temenmu, buat uji coba filter) -->
+<div class="song-grid" id="songGrid">
+  <div class="song-card" data-category="pop" data-title="Malam Minggu" data-date="2026-09-01">
+    <img src="https://via.placeholder.com/150" alt="Cover">
+    <h4>Malam Minggu</h4>
+    <p>Pop • Artis A</p>
+  </div>
+  <div class="song-card" data-category="lofi" data-title="Chilling Vibe" data-date="2026-09-15">
+    <img src="https://via.placeholder.com/150" alt="Cover">
+    <h4>Chilling Vibe</h4>
+    <p>Lofi • Artis B</p>
+  </div>
+  <div class="song-card" data-category="rock" data-title="Rock Heavy" data-date="2026-08-20">
+    <img src="https://via.placeholder.com/150" alt="Cover">
+    <h4>Rock Heavy</h4>
+    <p>Rock • Artis C</p>
+  </div>
+  <div class="song-card" data-category="pop" data-title="Aku dan Kamu" data-date="2026-09-20">
+    <img src="https://via.placeholder.com/150" alt="Cover">
+    <h4>Aku dan Kamu</h4>
+    <p>Pop • Artis D</p>
+  </div>
+</div>
