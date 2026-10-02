@@ -17,17 +17,153 @@ body {
     position: fixed;
     background-color: #121212;
     top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
     margin: 0;
-    padding: 1vw;
+    padding: 0;
     z-index: 1000;
+    border-bottom: 1px solid #333333;
 }
-.container {
-    overflow-y: scroll;
-    background-attachment: scroll;
-    background-color: #121212;
+
+.nav1-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 50px;
+    box-sizing: border-box;
+}
+
+.nav1-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-logo {
+    height: 22px;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
     margin: 0;
-    padding: 80px 2vw;
+    padding: 0;
+    gap: 15px;
 }
+
+.main-nav a {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px 0;
+    display: inline-block;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+}
+
+.nav1-center {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #222222;
+    border-radius: 4px;
+    padding: 4px 8px;
+}
+
+.search-box input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 4px 8px;
+    font-size: 13px;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    color: #888888;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav1-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-pro {
+    color: #ff5500;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.nav-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.avatar-placeholder {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background-color: #444444;
+}
+
+.dropdown-btn,
+.icon-btn {
+    background: transparent;
+    border: none;
+    color: #cccccc;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+}
+
+.dropdown-btn:hover,
+.icon-btn:hover {
+    color: #ffffff;
+}
+
+.container {
+       padding-top: 70px;
+   }
+
 .nav2 {
     background-color: #121212;
     margin: 0;

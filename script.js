@@ -11,29 +11,58 @@ link.addEventListener("click", e => {
 // FOOTER
 document.getElementById('year').textContent = new Date().getFullYear();
 
-const btn = document.getElementById('langBtn');
-const menu = document.getElementById('langMenu');
+const langButton = document.getElementById('langBtn');
+const langModal = document.getElementById('langModal');
+const langCloseButton = document.getElementById('langClose');
+const langCancelButton = document.getElementById('langCancel');
 
-if (btn && menu) {
-    btn.addEventListener('click', e => {
-        e.stopPropagation();
-        const open = menu.classList.toggle('open');
-        btn.setAttribute('aria-expanded', open);
+if (langButton && langModal) {
+    const setModalClosed = () => {
+        langModal.hidden = true;
+        langButton.setAttribute('aria-expanded', 'false');
+    };
+
+    const setModalOpen = () => {
+        langModal.hidden = false;
+        langButton.setAttribute('aria-expanded', 'true');
+    };
+
+    langButton.addEventListener('click', event => {
+        event.stopPropagation();
+        if (langModal.hidden) {
+            setModalOpen();
+        } else {
+            setModalClosed();
+        }
     });
 
-    menu.querySelectorAll('button').forEach(item => {
+    langModal.querySelectorAll('[data-lang]').forEach(item => {
         item.addEventListener('click', () => {
-            menu.querySelector('.active')?.classList.remove('active');
+            langModal.querySelector('.active')?.classList.remove('active');
             item.classList.add('active');
-            btn.textContent = item.textContent;
-            menu.classList.remove('open');
-            btn.setAttribute('aria-expanded', 'false');
+            langButton.textContent = item.textContent;
+            setModalClosed();
         });
-  });
+    });
 
-    document.addEventListener('click', () => menu.classList.remove('open'));
-    document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') menu.classList.remove('open');
+    if (langCloseButton) {
+        langCloseButton.addEventListener('click', setModalClosed);
+    }
+
+    if (langCancelButton) {
+        langCancelButton.addEventListener('click', setModalClosed);
+    }
+
+    document.addEventListener('click', event => {
+        if (!langModal.contains(event.target) && !langButton.contains(event.target)) {
+            setModalClosed();
+        }
+    });
+
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            setModalClosed();
+        }
     });
 }
 
