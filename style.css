@@ -4,6 +4,8 @@ html, body {
     width: 100%;
 }
 body {
+    margin: 0;
+    background-color: #121212;
     min-height: 100vh;
     color: #fff;
     font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Segoe UI Emoji',Roboto, Ubuntu, Cantarell, Noto Sans, 'Lucida Grande', sans-serif;
@@ -28,9 +30,34 @@ body {
     margin: 0;
     padding: 1vw;
 }
-.nav ul li {
-    color: #fff;
+.sub-nav {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0 23px;
+  list-style: none;
+  background: #121212;
+  font-family: "Helvetica Neue", Arial, sans-serif;
 }
+
+.sub-nav a {
+  display: block;
+  padding: 18px 10px 14px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #999;
+  text-decoration: none;
+}
+
+.sub-nav a:hover,
+.sub-nav a.active {
+  color: #fff;
+}
+
+.sub-nav a.active {
+  border-bottom: 2px solid #fff;
+}
+
 .play-controls {
     position: fixed;
     display: flex;

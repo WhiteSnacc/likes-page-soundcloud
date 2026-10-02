@@ -1,3 +1,15 @@
+// Sub Nav
+const subNavLinks = document.querySelectorAll(".sub-nav a");
+
+subNavLinks.forEach(link => {
+link.addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelector(".sub-nav a.active").classList.remove("active");
+    link.classList.add("active");
+    });
+});
+
+// PLay Controls
 const audio = document.querySelector("#audio");
 const playButton = document.querySelector("#play-button");
 const previousButton = document.querySelector("#previous-button");
