@@ -6,7 +6,6 @@
     <title>Hear the tracks you've liked: on SoundCloud</title>
     <link rel="icon" href="assets/soundcloud-icon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
     <link rel="preconnect" href="https://googleapis.com">
     <link rel="preconnect" href="https://gstatic.com" crossorigin>
     <link href="https://googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
@@ -32,6 +31,42 @@
             <div class="filters"></div>
         </div>
         <div class="playing-tiles">
+            <article class="track-tile">
+                <img src="assets/grid1.jpg" alt="Darkside cover">
+                <div class="track-copy"><span class="track-title">Darkside</span><span class="track-artist">Alan Walker</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid2.jpg" alt="Nobody cover">
+                <div class="track-copy"><span class="track-title">Nobody</span><span class="track-artist">Mitski</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid3.jpg" alt="God Is a Girl cover">
+                <div class="track-copy"><span class="track-title">God Is a Girl</span><span class="track-artist">W&amp;W and Groove Coverage</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid4.jpg" alt="Fool cover">
+                <div class="track-copy"><span class="track-title">Fool</span><span class="track-artist">Bôa</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid5.jpg" alt="Join Me in Death cover">
+                <div class="track-copy"><span class="track-title">Join Me in Death</span><span class="track-artist">HIM</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid6devmonster.jpg" alt="Monster cover">
+                <div class="track-copy"><span class="track-title">Monster</span><span class="track-artist">Dev</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid7.jpg" alt="Legends Never Die cover">
+                <div class="track-copy"><span class="track-title">Legends Never Die</span><span class="track-artist">Against the Current</span></div>
+            </article>
+            <article class="track-tile">
+                <img src="assets/grid8.jpg" alt="GODS cover">
+                <div class="track-copy"><span class="track-title">GODS</span><span class="track-artist">NewJeans</span></div>
+            </article>
+            <div class="tile-placeholder" aria-hidden="true"></div>
+            <div class="tile-placeholder" aria-hidden="true"></div>
+            <div class="tile-placeholder" aria-hidden="true"></div>
+            <div class="tile-placeholder" aria-hidden="true"></div>
         </div>
         <footer class="footer">
             <div class="footer-inner">
@@ -155,14 +190,17 @@
             <div class="next-up-control">
                 <button id="next-up-button" class="next-up-button" type="button" aria-expanded="false" aria-controls="next-up-menu">
                     <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v2H4zm0 6h16v2H4zm0 6h10v2H4zm12-1 5 3-5 3z"/></svg>
+                    <span>Next up</span>
                 </button>
-                <div id="next-up-menu" class="next-up-menu" hidden>
+                <div id="next-up-menu" class="next-up-menu">
                     <h2>Next up</h2>
-                    <ul id="next-up-list"></ul>
+                    <ul id="next-up-list">
+                        <li><div class="queue-track"><img src="assets/grid2.jpg" alt=""><span class="queue-track-copy"><span class="queue-track-artist">Mitski</span><span class="queue-track-title">Nobody</span></span></div></li>
+                        <li><div class="queue-track"><img src="assets/grid3.jpg" alt=""><span class="queue-track-copy"><span class="queue-track-artist">W&amp;W and Groove Coverage</span><span class="queue-track-title">God Is a Girl</span></span></div></li>
+                        <li><div class="queue-track"><img src="assets/grid4.jpg" alt=""><span class="queue-track-copy"><span class="queue-track-artist">Bôa</span><span class="queue-track-title">Fool</span></span></div></li>
+                    </ul>
                 </div>
             </div>
-            <span id="player-status" class="player-status" role="status" aria-live="polite"></span>
-            <audio id="audio" src="songs/Nightcore - Darkside - Alan Walker.mp3"></audio>
         </div>
     </div>
 </body>
